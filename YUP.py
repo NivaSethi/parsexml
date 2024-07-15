@@ -28,7 +28,7 @@ def write_to_csv(data, csv_file):
         writer.writerow(data)
 
 def main():
-    xml_folder = 'Downloads/search_result'  # replace with your xml folder path
+    xml_folder = 'Downloads/search_result' 
     csv_file = 'output.csv'
 
     # Write headers to the CSV file
@@ -38,7 +38,7 @@ def main():
               'site_names', 'site_addresses'])
         writer.writeheader()
 
-    # Parse each XML file and write the data to the CSV file
+    # Parse 
     for xml_file in os.listdir(xml_folder):
         if xml_file.endswith('.xml'):
             data = parse_xml(os.path.join(xml_folder, xml_file))
